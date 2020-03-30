@@ -1,0 +1,167 @@
+<head>
+	<link href="https://cdn.icon-icons.com/icons2/67/PNG/512/penguin_13672.png" rel="icon" type="image/x-icon">
+	<title>Ver peliculas.pingu</title>
+</head>
+<body>
+	<section id="anna">
+		<div class="div">
+			<div class="texto">
+				<h1 title="tula" class="text">Anna: el peligro tiene nombre</h1>
+			</div>
+			<div class="center">
+				<iframe  class="repro" src="https://jetload.net/e/XyGTKdZKagW4" frameborder="0" allowfullscreen=""></iframe>
+			</div>
+		</div>
+		<button class="img imganna"><img src="https://cdn.icon-icons.com/icons2/1674/PNG/512/arrowheaddown_110942.png"></button>
+	</section>
+	<section id="malefica">
+		<div class="div">
+			<div class="texto">
+				<h1 title="pinga" class="text">Malefica 2: La dueña del pan</h1>
+			</div>
+			<div class="center">
+				<iframe class="repro" allowfullscreen="" frameborder="0" height="315" src="https://animekao.club/player/player.php?id=Mjk5NA" width="100%"></iframe>
+			</div>
+			<button class="img imgmalefica"><img src="https://cdn.icon-icons.com/icons2/1674/PNG/512/arrowheaddown_110942.png"></button>
+		</div>
+	</section>
+	<section id="metros">
+		<div class="div">
+			<div class="texto">
+				<h1 title="cieso" class="text">3 metros sobre el cielo</h1>
+			</div>
+			<div class="center">
+				<iframe class="repro" id="iframe_repro" scrolling="no" frameborder="0" allowfullscreen="" src="https://vidlox.me/embed-lhfucgespcpy.html" style="display: block;"></iframe>
+			</div>
+			<button class="img imgmetro"><img src="https://cdn.icon-icons.com/icons2/1674/PNG/512/arrowheaddown_110942.png"></button>
+		</div>
+	</section>
+	<section id="blood">
+		<div class="div">
+			<div class="texto">
+				<h1 title="kaguamas" class="text">Bloodshot</h1>
+			</div>
+			<div class="center">
+				<iframe class="repro" src="https://jetload.net/e/SScMITYZ6ihN" frameborder="0" allowfullscreen=""></iframe>
+			</div>
+			<button class="img imgpronto"><img hidden src="https://cdn.icon-icons.com/icons2/1674/PNG/512/arrowheaddown_110942.png"><h1 class="text">Pronto Muchas más...</h1></button>
+		</div>
+	</section>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+			scroll-behavior: smooth;
+		}
+		body{
+			display: block;
+		}
+		.repro{
+			position: absolute;
+			width: 70%;
+			height: 400px;
+		}
+		.center{
+			display: flex;
+			justify-content: center;
+			align-items: center;	
+		}
+		img{
+			width: 50px;
+			filter: hue-rotate(0deg) brightness(1000%);
+			transition: all .35s linear;
+		}
+		img:hover{
+			filter: hue-rotate(0deg) brightness(100%);
+		}
+		.imgpronto{
+			animation-play-state: paused;
+		}
+		.centro{
+			position: absolute;
+			
+		}
+		button{
+			
+			text-align: center;
+			width: 100%;
+		    	right: 0;
+			font-family: sans-serif;
+		    	left: 0;
+			animation: flecha 1s infinite;
+			transform: translateY(-15px);
+			cursor:pointer;
+		    	position: absolute;
+			filter:blur(.6);
+			background: transparent;
+			border: none;
+			outline: none;
+		}
+		.div{
+			background-color: rgba(0,0,0,.2);
+		}
+		section, .div, .center{
+			height: 100%
+		}
+		.text{
+			color: white;
+			font-size:40px;
+		}
+		.texto{
+			position: absolute;
+			width: 100%;
+			text-align: center;
+		}
+		#anna{
+			background: URL("https://www.sectorcine.com/wp-content/uploads/2019/09/anna-el-peligro-tiene-nombre-critica.jpg") fixed center no-repeat;
+			background-size: cover;
+		}
+		#malefica{
+			background: URL("https://miro.medium.com/max/2800/0*5pr3N83nxt7QlYyi.jpeg") fixed center no-repeat;
+			background-size: cover;
+		}
+		#metros{
+			background: URL("https://e00-telva.uecdn.es/assets/multimedia/imagenes/2020/03/17/15844609709134.jpg") fixed center no-repeat;
+			background-size: cover;
+		}
+		#blood{
+			background: URL("https://img.over-blog-kiwi.com/4/51/86/86/20200320/ob_c0acd5_1.jpeg#width=1600&height=674") fixed center no-repeat;
+			background-size: cover;
+		}
+		@keyframes flecha{
+			0%{transform: translateY(-60px);}
+			50%{transform: translateY(-45px);}
+			100%{transform: translateY(-60px);}
+		}
+	</style>
+	<script>
+		var anna = document.querySelector("#anna");
+		var malefica = document.querySelector("#malefica");
+		var metros = document.querySelector("#metros")
+		var blood = document.querySelector("#blood")
+		document.querySelector(".imganna").addEventListener("click",()=>{
+			//console.log("ancho" + screen.width)
+			//console.log("alto" + screen.height)
+			var altura = screen.height;
+			var division = altura/3;
+			console.log(anna.getBoundingClientRect().top)
+			window.scrollBy(0,malefica.getBoundingClientRect().top);
+			console.log(window.pageYOffset);
+		})
+		document.querySelector(".imgmalefica").addEventListener("click",()=>{
+			var altura = screen.height;
+			var division = altura/3;
+			console.log(malefica.getBoundingClientRect().top)
+			window.scrollBy(0,metros.getBoundingClientRect().top);
+			console.log(window.pageYOffset);
+		})
+		document.querySelector(".imgmetro").addEventListener("click",()=>{
+			var altura = screen.height;
+			var division = altura/3;
+			console.log(blood.getBoundingClientRect().top)
+			window.scrollBy(0,blood.getBoundingClientRect().top);
+			console.log(window.pageYOffset);
+		})
+	</script>
+    </div>
+</body>
