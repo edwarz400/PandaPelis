@@ -1,0 +1,115 @@
+* {
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            height: 100%;
+        }
+
+        body {
+            display: block;
+        }
+
+        .repro {
+            position: absolute;
+            width: 70%;
+            height: 400px;
+        }
+
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img {
+            width: 50px;
+            height: 50px;
+            filter: hue-rotate(0deg) brightness(1000%);
+            transition: all .35s linear;
+        }
+
+        img:hover {
+            filter: hue-rotate(0deg) brightness(100%);
+        }
+
+        .imgpronto {
+            animation-play-state: paused;
+        }
+
+        .centro {
+            position: absolute;
+
+        }
+
+        button {
+
+            text-align: center;
+            width: 100%;
+            height: 50px;
+            right: 0;
+            font-family: sans-serif;
+            left: 0;
+            animation: flecha 1s infinite;
+            transform: translateY(-15px);
+            cursor: pointer;
+            position: absolute;
+            filter: blur(.6);
+            background: transparent;
+            border: none;
+            outline: none;
+        }
+
+        .div {
+            background-color: rgba(0, 0, 0, .2);
+        }
+
+        section,
+        .div,
+        .center {
+            height: 100%
+        }
+
+        .text {
+            color: white;
+            font-size: 40px;
+        }
+
+        .texto {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+        }
+
+        #anna {
+            background: URL("https://www.sectorcine.com/wp-content/uploads/2019/09/anna-el-peligro-tiene-nombre-critica.jpg") fixed center no-repeat;
+            background-size: cover;
+        }
+
+        #malefica {
+            background: URL("https://miro.medium.com/max/2800/0*5pr3N83nxt7QlYyi.jpeg") fixed center no-repeat;
+            background-size: cover;
+        }
+
+        #metros {
+            background: URL("https://e00-telva.uecdn.es/assets/multimedia/imagenes/2020/03/17/15844609709134.jpg") fixed center no-repeat;
+            background-size: cover;
+        }
+
+        #blood {
+            background: URL("https://img.over-blog-kiwi.com/4/51/86/86/20200320/ob_c0acd5_1.jpeg#width=1600&height=674") fixed center no-repeat;
+            background-size: cover;
+        }
+
+        @keyframes flecha {
+            0% {
+                transform: translateY(-60px);
+            }
+
+            50% {
+                transform: translateY(-45px);
+            }
+
+            100% {
+                transform: translateY(-60px);
+            }
+        }
