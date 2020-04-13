@@ -1,118 +1,195 @@
 * {
-            margin: 0;
-            padding: 0;
-            scroll-behavior: smooth;
-            height: 100%;
-        }
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
 
-        body {
-            display: block;
-        }
+button {
+    width: 100%;
+    height: 50px;
+    font-family: sans-serif;
+    animation: flecha 1s infinite;
+    transform: translateY(0px);
+    cursor: pointer;
+    filter: blur(.6);
+    background: transparent;
+    border: none;
+    outline: none;
+}
 
-        .repro {
-            position: absolute;
-            width: 70%;
-            height: 400px;
-        }
+img {
+    width: 50px;
+    height: 50px;
+    filter: hue-rotate(0deg) brightness(1000%);
+    transition: all .35s linear;
+}
 
-        .center {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+img:hover {
+    filter: hue-rotate(0deg) brightness(100%);
+}
 
-        img {
-            width: 50px;
-            height: 50px;
-            filter: hue-rotate(0deg) brightness(1000%);
-            transition: all .35s linear;
-        }
+section {
+    height: 100vh;
+}
 
-        img:hover {
-            filter: hue-rotate(0deg) brightness(100%);
-        }
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-        .imgpronto {
-            animation-play-state: paused;
-        }
+.center, .download{
+    margin: 2.5% 0;
+}
 
-        .centro {
-            position: absolute;
+.div {
+    height: 100%;
+    background-color: rgba(0, 0, 0, .2);
+}
 
-        }
+.download {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-        button {
+.download a {
+    text-decoration: none;
+    padding: 13px 35px;
+    animation: color 15s linear infinite;
+    color: white;
+    border-radius: 7px;
+    opacity: .8;
+    transition: opacity .35s linear;
+}
 
-            text-align: center;
-            width: 100%;
-            height: 50px;
-            right: 0;
-            font-family: sans-serif;
-            left: 0;
-            animation: flecha 1s infinite;
-            transform: translateY(-15px);
-            cursor: pointer;
-            position: absolute;
-            filter: blur(.6);
-            background: transparent;
-            border: none;
-            outline: none;
-        }
+.download a:hover {
+    opacity: 1;
+}
 
-        .div {
-            background-color: rgba(0, 0, 0, .2);
-        }
+.frame {
+    position: relative;
+    width: 70%;
+    height: 400px;
+    display: flex;
+    background-color: rgba(105, 105, 105, 0.476);
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 1;
+}
 
-        section,
-        .div,
-        .center {
-            height: 100%
-        }
+.imgclose {
+    position: absolute;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    right: 0;
+    transition: all .35s linear;
+    z-index: 1;
+}
 
-        .text {
-            color: white;
-            font-size: 40px;
-        }
+.imgloader {
+    position: absolute;
+    width: 52%;
+    height: 200px;
+    /* opacity: .6; */
+    filter: hue-rotate(0deg);
+}
 
-        .texto {
-            position: absolute;
-            width: 100%;
-            text-align: center;
-        }
+.imgplay {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    filter: hue-rotate(0deg) brightness(66%);
+    transition: all .35s linear;
+    cursor: pointer;
+    z-index: 1;
+}
 
-        #anna {
-            background: URL("https://www.sectorcine.com/wp-content/uploads/2019/09/anna-el-peligro-tiene-nombre-critica.jpg") no-repeat center center fixed;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-        }
+.imgplay:hover {
+    filter: hue-rotate(0deg) brightness(150%);
+}
 
-        #malefica {
-            background: URL("https://miro.medium.com/max/2800/0*5pr3N83nxt7QlYyi.jpeg") fixed center no-repeat;
-            background-size: cover;
-        }
+.imgpronto {
+    animation-play-state: paused;
+}
 
-        #metros {
-            background: URL("https://e00-telva.uecdn.es/assets/multimedia/imagenes/2020/03/17/15844609709134.jpg") fixed center no-repeat;
-            background-size: cover;
-        }
+/* img:hover {
+    filter: hue-rotate(0deg) brightness(100%);
+} */
 
-        #blood {
-            background: URL("https://img.over-blog-kiwi.com/4/51/86/86/20200320/ob_c0acd5_1.jpeg#width=1600&height=674") fixed center no-repeat;
-            background-size: cover;
-        }
+.repro {
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
 
-        @keyframes flecha {
-            0% {
-                transform: translateY(-60px);
-            }
+.text {
+    color: white;
+    font-size: 5vh;
+}
 
-            50% {
-                transform: translateY(-45px);
-            }
+.texto {
+    width: 100%;
+    text-align: center;
+}
 
-            100% {
-                transform: translateY(-60px);
-            }
-        }
+#anna {
+    display: block;
+    background: URL("../img/anna-el-peligro-tiene-nombre-critica.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#malefica {
+    display: block;
+    background: URL("../img/0_5pr3N83nxt7QlYyi.jpeg") fixed center no-repeat;
+    background-size: cover;
+}
+
+#metros {
+    display: block;
+    background: URL("../img/15844609709134.jpg") fixed center no-repeat;
+    background-size: cover;
+}
+
+#blood {
+    display: block;
+    background: URL("../img/ob_c0acd5_1.jpeg") fixed center no-repeat;
+    background-size: cover;
+}
+
+@keyframes flecha {
+    0% {
+        transform: translateY(-2px);
+    }
+    50% {
+        transform: translateY(-14px);
+    }
+    100% {
+        transform: translateY(-2px);
+    }
+}
+
+@keyframes color {
+    0% {
+        background-color: rgba(0, 255, 0, 0.972);
+    }
+    25% {
+        background-color: rgb(62, 255, 255, 0.972);
+    }
+    50% {
+        background-color: rgb(153, 43, 255, 0.972);
+    }
+    75% {
+        background-color: rgb(255, 49, 49, 0.972);
+    }
+    100% {
+        background-color: rgba(0, 255, 0, 0.972);
+    }
+}
